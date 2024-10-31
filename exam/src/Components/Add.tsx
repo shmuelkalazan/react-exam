@@ -32,6 +32,7 @@ function Add(props:Props) {
             console.log(`Couldn't proccess your mission`);
         }
         };
+        
         {name.current?.value && description.current?.value && addMissionToServer() }
     };
     
