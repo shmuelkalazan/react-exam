@@ -7,7 +7,7 @@ interface Props{
 }
 
 function Item(props:Props) {
-
+   //delete mission
     const deleteMIssion = () => {
         const BASE_URL = `https://reactexambackend.onrender.com/missions/8486397`
             const deletMissionToServer = async (): Promise<void> => {
@@ -29,6 +29,7 @@ function Item(props:Props) {
             deletMissionToServer()
         };
 
+    //updae mission
     const updateMission = () => {
         const BASE_URL = `https://reactexambackend.onrender.com/missions/8486397`
             const updateMissionToServer = async (): Promise<void> => {
@@ -47,6 +48,7 @@ function Item(props:Props) {
             updateMissionToServer()
         }
         
+  // display the missions and buttons
   return (
     <div className={`item ${props.mission.status}`}>
         <div className={`in_item`}>

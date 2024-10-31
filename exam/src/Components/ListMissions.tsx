@@ -7,7 +7,7 @@ interface Props{
   setChange:((x:any)=>void)
   change:boolean
 }
-
+// display all missinos
 function ListMissions(props:Props) {
   return (
     <div>
