@@ -3,7 +3,7 @@
 }
 .add{
     height: 200px;
-    width: 90%;
+    width:95%;
     background-color: #65ff86;
     display: flex;
     flex-direction: column;
@@ -43,9 +43,6 @@
 }
 .btn_prog{
     background-color: #65ff86;
-}
-.Peding{
-
 }
 .Completed{
     background-color: rgb(64, 205, 9);

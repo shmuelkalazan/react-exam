@@ -1,4 +1,3 @@
-import React, { useRef } from 'react'
 import Mission from '../Model/MissionsModel'
 
 interface Props{
@@ -13,7 +12,6 @@ function Item(props:Props) {
         const BASE_URL = `https://reactexambackend.onrender.com/missions/8486397`
             const deletMissionToServer = async (): Promise<void> => {
             try {
-                console.log(props.mission._id)
                 const res: Response = await fetch(`${BASE_URL}/${props.mission._id}`, {
                 method: "DELETE",
                 headers: {
@@ -35,14 +33,12 @@ function Item(props:Props) {
         const BASE_URL = `https://reactexambackend.onrender.com/missions/8486397`
             const updateMissionToServer = async (): Promise<void> => {
             try {
-                const res: Response = await fetch(`${BASE_URL}/progress/${props.mission._id}`, {
+                await fetch(`${BASE_URL}/progress/${props.mission._id}`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
                 },
                 });
-                const data = await res.json();
-                // console.log(data)
                 props.setChange(!props.change)
             } catch (err) {
                 console.log(`Couldn't proccess your mission`);
@@ -50,6 +46,7 @@ function Item(props:Props) {
             };
             updateMissionToServer()
         }
+        
   return (
     <div className={`item ${props.mission.status}`}>
         <div className={`in_item`}>
