@@ -32,7 +32,7 @@ function Add(props:Props) {
             console.log(`Couldn't proccess your mission`);
         }
         };
-        
+        {!name.current?.value || !description.current?.value && alert("all fileds must be provided") }
         {name.current?.value && description.current?.value && addMissionToServer() }
     };
     
@@ -46,7 +46,6 @@ function Add(props:Props) {
         </select>
         <select className='card' ref={priority} name="priority" id="">
             <option value="Low">Low</option>
-            <option value="Middle">Middle</option>
             <option value="High">High</option>
         </select>
         <input className='card' ref={description}  type="text" placeholder='description:' />
