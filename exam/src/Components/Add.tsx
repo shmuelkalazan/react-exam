@@ -24,6 +24,8 @@ function Add(props:Props) {
                 priority: priority.current?.value || 'Low',
                 description: description.current?.value || ''
             }),
+
+            
             });
             const data = await res.json();
             console.log(data)
